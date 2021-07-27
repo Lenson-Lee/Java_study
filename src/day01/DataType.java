@@ -48,6 +48,7 @@ public class DataType {
 //        char c2 = "a", char c3 = 'abc'
 
         //String: 문자열을 저장, 겹따옴표 사용, 기본타입 아님
+        //테스트 주석
         String s1 = "abcdef";
 
         System.out.println("100" + "200"); //300(X) 100200(O)
