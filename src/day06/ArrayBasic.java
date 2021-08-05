@@ -51,6 +51,7 @@ public class ArrayBasic {
         double[] dArr = new double[4];
 
         //배열의 선언과 생성과 초기화를 동시에 할 수 있음 new String[]갯수를 (구체적으로) 적으면 안된다.
+        //new String[]은 생성시에만 생략 가능, 수정시에는 핅수.
         String[] foods = new String[] {"짜장면", "탕수육", "볶음밥"};
 
         //배열의 선언시에만 new type[] 생략 가능
