@@ -18,6 +18,7 @@ public class MethodQuiz1 {
 
 
     public static void main(String[] args) {
+
         System.out.println("\n10의 약수의 총합: " + calcDivisor(10));
         System.out.println("==============================");
         System.out.println("\n30의 약수의 총합: " + calcDivisor(30));
