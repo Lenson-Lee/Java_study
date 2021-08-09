@@ -14,7 +14,7 @@ public class MethodQuiz2 {
         //총합 반복문.
         for (int i = 0; i < numbers.length; i++) {
             total += numbers[i];
-            System.out.printf("total + number[i] = %d\n", total);
+            System.out.printf("%d\n", total);
         }
         return total;
 
