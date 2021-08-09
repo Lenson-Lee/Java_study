@@ -9,69 +9,45 @@ public class project {
 
     //기존에 존재하는 이이디로 로그인
     static  String guestLogin(String id) {
-        String[] idArr = {"guest1","guest2","master"};
-        String[] pwArr = {"1234", "5678", "0000"};
-        String[] nickArr = {"밥그릇", "숟가락", "사장"};
+        String[] idArr = {"guest1","guest2"};
+        String[] pwArr = {"1234", "5678"};
+        String[] nickArr = {"밥그릇", "숟가락"};
+
+        String master = "사장님";
+        //사장님 pw = 0000;
         int idx = -1;
 
         while (true) {
-
             //id 인덱스 탐색
             for (int i = 0; i < idArr.length; i++) {
                 if (idArr[i].equals(id)) {
                     idx = i;
-                    System.out.println("id가 일치합니다.");
                     break;
                 }
-                System.out.println("id가 존재하지 않습니다. 프로그램을 종료합니다.");
+            }//ID for end
+
+
+        //비밀번호 일치 여부
+
+        //동일한 인덱스의 비밀번호 배열에서 일치여부 조회
+        System.out.println("비밀번호를 입력해 주세요!");
+        String pw = sc.next();
+
+            if (pwArr[idx].equals(pw) && idx != -1){ //로그인 성공
+                //로그인 성공
+                System.out.println(nickArr[idx] + "님 환영합니다!");
                 break;
-            }//for end
-
-            if(idx != -1) {
-
-                //동일한 인덱스의 비밀번호 배열에서 일치여부 조회
-                System.out.println("비밀번호를 입력해 주세요!");
-                String pw = sc.next();
-
-                if (pwArr[idx].equals(pw)){ //로그인 성공
-                    //로그인 성공
-                    System.out.println(nickArr[idx] + "님 환영합니다!");
-                    break;
-                } else { //로그인 실패
-                    System.out.println("비밀번호가 일치하지 않습니다! 프로그램을 종료합니다.");
-                    break;
-                }//Pw end
-            }
+            } else { //로그인 실패
+                System.out.println("비밀번호가 일치하지 않습니다! 프로그램을 종료합니다.");
+                break;
+            }//pw id == pw if
         }//while end
 //
-//        //================================================
-//        for (int i = 0; i < idArr.length; i++) {
-//            if (idArr[i].equals(id)){
-//
-//                //동일한 인덱스의 비밀번호 배열에서 일치여부 조회
-//                System.out.println("비밀번호를 입력해 주세요!");
-//                String pw = sc.next();
-//
-//                if (pwArr[i].equals(pw)){ //로그인 성공
-//                    //로그인 성공
-//                    System.out.println(nickArr[i] + "님 환영합니다!");
-//                    break;
-//                } else { //로그인 실패
-//                    System.out.println("비밀번호가 일치하지 않습니다! 프로그램을 종료합니다.");
-//                    break;
-//                }//Pw end
-//
-//            } else {
-//                System.out.println("id가 존재하지 않습니다. 프로그램을 종료합니다.");
-//                break;
-//            }//Id end
-//        }
         return id;
     }//end guest
 
 
     public static void main(String[] args) {
-
 
         System.out.println("=================================");
         System.out.println("\n++++++++++주문서 프로그램++++++++++\n");
