@@ -11,15 +11,14 @@ public class projectYeop {
         // Scanner 설정
         static Scanner sc = new Scanner(System.in);
 
-
-        ///// 전역 변수 /////
+        //=======================================
+        //++++++++++++++ 전역 변수 +++++++++++++++
+        //=======================================
 
         // 음식 선택한 배열
         static String[] menuBox = new String[0];
-
         //음식 선택한 것
         static String foods;
-
         // 요청사항 배열
         static String[] requestBox = new String[0];
 
