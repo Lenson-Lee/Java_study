@@ -40,6 +40,35 @@ public class PhoneFactory {
 
         Phone lgV6 = new Phone("LG V6", "다라이레드");
         lgV6.showSpec();
+
+
+        System.out.println("===================================");
+
+        //System.out.println("아이폰x 배터리: "+ iPhoneX.battery);  //null. 아직 없다.
+        //iPhoneX.battery = new Battery();//기본 생성자.
+
+        //Phone 타입 iPhonex에 Battery타입의 battery를 부르고, battery 속의 company를 부른거다..
+        iPhoneX.battery = new Battery("샤오미");
+        System.out.println("아이폰x 배터리: "+ iPhoneX.battery.company);
+
+
+        System.out.println("===================================");
+
+        //sendMessage()에서 ctrl+T하면 단축
+        //iPhoneX.powerOff();
+        galaxyS21.sendMessage(iPhoneX, "에벱벱");
+        galaxyS21.sendMessage(iPhoneX, "에벱벱");
+        galaxyS21.sendMessage(lgV6, "멍멍야옹");
+        lgV6.sendMessage(iPhoneX, "야옹이와멍멍이");
+
+        iPhoneX.checkMessages();
+        lgV6.checkMessages();
+
+
+
+
+
+
 //        iPhoneX.model = "아이폰X";
 //        //iPhoneX.company => 필드에 없는 속성은 만들 수 없다. 원하면 필드에 가서 만들어야함.자바스크립트는 가능하지만 자바는 불가.
 //        iPhoneX.price = 200000;
