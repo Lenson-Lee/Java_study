@@ -9,6 +9,7 @@ public class StudentController {
     private Student[] sArr = new Student[5];
 
     //상수 : 불변의 값    static final
+    //static 스크립트의 const같은 개념. 바꿀 수 없다.
     public static final int CUT_LINE = 60;
 
     //==========생성자 선언부=================
@@ -25,7 +26,10 @@ public class StudentController {
     public Student[] printStudent() {
         return sArr;//처음에 기본값으로 null 넣어두기
     }
-    public int sumScore() {
+
+    //avgScore 에 포함되어서 작성하는 함수여서 외부에서 쓰지 않고 내부에서만 쓰니까 프라이빗 쓰기.
+    //StudentMenu 등 작성할때 단축키?에 뜨면 불편하니까 정리하는 식?
+    private int sumScore() {
         //score가 프라이빗이어서 get사용
         int total = 0;
 
