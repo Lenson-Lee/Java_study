@@ -305,26 +305,9 @@ public class MemberMenu {
     //=========================================================================================================
     //한 명의 정보만 삭제하는 메서드
     public void deleteOne() {
-        System.out.println("\n# 삭제할 아이디를 입력해 주세요");
-        String id = sc.next();
-        Member member = mc.searchId(id);
-        if (member == null) {
-            System.out.println("\n# 존재하지 않는 회원입니다.");
-        } else {
-            System.out.printf("# %s님의 정보를 삭제할까요? [y/n]\n", member.getName());
-            String check = sc.next();
 
-            if (check.equalsIgnoreCase("y")) {
 
-                //
-                //삭제 메서드 만들어야 한다!~!~!~
-                //
 
-            } else {
-                System.out.println("잘못 입력하였습니다. 메뉴로 돌아갑니다.");
-            }
-
-        }//if end
 
     }//deleteOne end
     //=========================================================================================================

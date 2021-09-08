@@ -146,12 +146,10 @@ public class MemberController {
     //=========================================================================================================
     //한 회원만 삭제하는 메소드 + 가장 어려울듯하다.
     public boolean delete(String id) {
-        Member member = searchId(id);
-        if(member != null) {
-            return true;
-        } else {
-            return false;
-        }
+
+
+        int i;
+        return false;
     }
     //=========================================================================================================
 
