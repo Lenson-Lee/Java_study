@@ -67,7 +67,7 @@ public class Member {
     }
 
     //멤버 클래스의 모든 필드값을 합쳐서 반환
-    String inform() {
+    public String inform() {
         //String 할때 format 쓰면 print F 처럼 하면 + + 안해도 되서 편하다
         return String.format("%s | %s | %s | %s | %c | %d ", id, name, password, email, gender, age);
     }
