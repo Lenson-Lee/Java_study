@@ -125,7 +125,7 @@ public class MemberController {
     //이름 변경 메소드
     public boolean updateName(String id, String name) {
         Member member = searchId(id);
-        if(member != null) {
+        if (member != null) {
             member.setName(name);
             return true;
         } else {
@@ -136,20 +136,35 @@ public class MemberController {
     //이메일 변경 메소드
     public boolean updateEmail(String id, String email) {
         Member member = searchId(id);
-        if(member != null) {
+        if (member != null) {
             member.setEmail(email);
             return true;
         } else {
             return false;
         }
     }
+
     //=========================================================================================================
     //한 회원만 삭제하는 메소드 + 가장 어려울듯하다.
     public boolean delete(String id) {
 
-
-        int i;
-        return false;
+        int count = existMemberNum();
+        //삭제할 데이터 인덱스 구하기
+        int delIdx = -1;
+        for (int i = 0; i < count; i++) {
+            if (id.equals(m[i].getId())) {
+                delIdx = i;
+                break;
+            }
+        }
+        //삭제 알고리즘
+        if (delIdx != -1) {
+            for (int i = delIdx; i < count - 1; i++) {
+                m[i] = m[i + 1];
+            }
+            m[count - 1] = null; //마지막 데이터 null로 변경
+        }
+        return true;//???강사쌤이랑 차이가 있으니 확인 필요
     }
     //=========================================================================================================
 
