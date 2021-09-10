@@ -9,14 +9,20 @@ public class Player extends Object {
 
     //자식 클래스명에 extends Player 입력.
     //공통 속성
-    String nickName;
-    int level;
-    int hp;
+    public String nickName; //public으로 바꿔주어서 day15.Party오류 없앰
+    public int level;
+    public int hp;
 
     //기본생성자
     public Player() {
         System.out.println("부모 객체 클래스 Player 생성!");
 
+    }
+
+    public Player(String nickName) {
+        this.nickName = nickName;
+        this.level = 1;
+        this.hp = 50;
     }
 
 
@@ -27,7 +33,6 @@ public class Player extends Object {
         System.out.println("# : 레벨" + level);
         System.out.println("# : 체력" + hp);
     }
-
 
 
 }
