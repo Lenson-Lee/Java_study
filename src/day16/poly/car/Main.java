@@ -35,6 +35,25 @@ public class Main {
         park.drive(new Tucson());
         park.drive(new Boxster());
 
+        System.out.println("====================");
+
+        Sonata mySonata = (Sonata) park.buyCar("소나타");
+        mySonata.run();
+
+        //mySonata.joinClub();  타입이 mySonata는 Car타입이라 mySonata에 들어있는 객체는 sonata타입이라..?
+        //리턴받는 순간 하위타입으로 변환하여 쓰면 된다. => Car mySonata를 Sonata my Sonata로 바꾼다. 40번줄
+        mySonata.joinClub();
+
+        sArr[0] = mySonata;
+
+        System.out.println("====================");
+
+        CarShop shop = new CarShop();
+        int money = shop.sellCar(mySonata);
+        int money2 = shop.sellCar(b);
+        System.out.println("money = "+ money);
+        System.out.println("money2 = "+ money2);
+
 
     }
 

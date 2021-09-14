@@ -1,5 +1,7 @@
 package day16.poly.car;
 
+import javax.swing.*;
+
 public class Driver {
 
 //    public void driveSonata(Sonata s) {
@@ -26,6 +28,24 @@ public class Driver {
         System.out.println("a =" + a);
     }
 
+    public Car buyCar(String carName) {
+
+        //void 는 리턴값이 업는 함수여서  자동차타입으로 변환해줘야한다.
+
+        if (carName.equals("투싼")){
+            System.out.println("투싼을 구매합니다.");
+            return new Tucson();
+        } else if (carName.equals("소나타")) {
+            System.out.println("소나타를 구매합니다.");
+            return new Sonata();
+        } else if (carName.equals("포르쉐")){
+            System.out.println("박스터를 구매합니다.");
+            return new Boxster();
+        } else {
+            System.out.println("그런 차량은 없습니다.");
+            return null;
+        }
+    }
 
 
 }
