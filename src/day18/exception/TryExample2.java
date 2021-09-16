@@ -31,6 +31,7 @@ public class TryExample2 {
 
         } catch (Exception e) {
             e.printStackTrace();    //이걸 통해 오류명을 알 수 있고, catch()에 오류명을 넣으면 이 오류에 대한 반응을 만들 수 있다.
+            //runtimeException 의 경우에는 에러메시지를 잘 읽을 줄 아는 경험이 필요.
 
         }
     }
