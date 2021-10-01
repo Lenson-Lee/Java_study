@@ -54,7 +54,7 @@ public class MapExample {
         System.out.println(students.containsKey("짹짹이"));
 
         //map의 반복문 처리
-        //for(String data : students) {     forEach 하려면 이터러블 구현받아야하는데 Map 에 들어가보면 extends 가 없어서. Set 은 extends 따라 들어가보면 있어서 가능.
+        //for(String data : students) {     forEach 하려면 이터러블 구현받아야하는데 Map 에 들어가보면 extends 가 없어서불가능. Set 은 extends 따라 들어가보면 있어서 가능.
 
         Set<String> keys = students.keySet();
         System.out.println(keys);
